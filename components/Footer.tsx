@@ -27,7 +27,8 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand */}
           <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-4 w-full">
-              <img src={ASSETS.logoHero} alt="Berp Logo" className="h-14 md:h-20 w-auto invert brightness-0" />
+              <img src={ASSETS.logoHero} alt="Berp Logo"
+                className="h-40  w-auto invert brightness-0" />
             </div>
             <p className="text-gray-400 leading-relaxed text-sm">
               Diseño, contenido y estrategia para marcas que quieren crecer, vender y construir a largo plazo.
@@ -53,7 +54,7 @@ export const Footer: React.FC = () => {
               <li><a href="#team" className="hover:text-berp-teal transition-colors">Equipo</a></li>
               <li><a href="#faq" className="hover:text-berp-teal transition-colors">Preguntas frecuentes</a></li>
               <li>
-                <a href={SOCIAL_LINKS.berfriends} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-berp-teal transition-colors text-berp-teal font-bold mt-2">
+                <a href={SOCIAL_LINKS.berfriends} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-berp-teal transition-colors text-berp-teal font-medium mt-2">
                   Canal BerpFriends <Instagram size={14} />
                 </a>
               </li>
@@ -68,7 +69,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Phone size={18} className="text-berp-teal mt-1" />
                 <div>
-                  <p className="font-bold text-white">WhatsApp</p>
+                  <p className="font-semibold text-white">WhatsApp</p>
                   <a href={WHATSAPP.url} target="_blank" rel="noreferrer" className="hover:text-berp-teal transition-colors">
                     {WHATSAPP.displayNumber}
                   </a>
@@ -78,7 +79,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Mail size={18} className="text-berp-teal mt-1" />
                 <div>
-                  <p className="font-bold text-white">Correo</p>
+                  <p className="font-semibold text-white">Correo</p>
                   <a href="mailto:contacto@berp.cl" className="hover:text-berp-teal">contacto@berp.cl</a>
                 </div>
               </div>
@@ -86,7 +87,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-berp-teal mt-1" />
                 <div>
-                  <p className="font-bold text-white">Dirección</p>
+                  <p className="font-semibold text-white">Dirección</p>
                   <p>Zenteno 130-138, Santiago, Chile</p>
                   <p className="text-xs mt-1">Retiros: Santiago Centro, Lo Barnechea, Pudahuel</p>
                 </div>
@@ -95,7 +96,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Globe size={18} className="text-berp-teal mt-1" />
                 <div>
-                  <p className="font-bold text-white">Taller de impresión</p>
+                  <p className="font-semibold text-white">Taller de impresión</p>
                   <p>Pudahuel (Solo retiros)</p>
                 </div>
               </div>

@@ -4,49 +4,72 @@ import { ASSETS, WHATSAPP } from '../constants';
 
 export const Hero: React.FC = () => {
   return (
-    <div id="home" className="relative h-screen bg-berp-dark flex flex-col justify-center items-center text-center px-4 overflow-hidden">
-      {/* Abstract Background Elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-berp-teal opacity-10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600 opacity-10 rounded-full blur-3xl"></div>
+    <section
+      id="home"
+      className="relative min-h-[100svh] bg-berp-dark flex flex-col justify-center items-center text-center px-4 pt-24 pb-20 overflow-hidden"
+    >
+      {/* Background */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-berp-teal opacity-10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600 opacity-10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="z-10 animate-fade-in-up max-w-5xl mx-auto">
-        {/* Logo Placeholder - Should be replaced by actual logo image if available, using text for now as per instructions "Poner el logotipo original" */}
-        <div className="mb-8 flex flex-col items-center">
-          <img src={ASSETS.logoHero} alt="BERP Logo" className="h-48 md:h-72 w-auto mb-4" />
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto animate-fade-in-up">
+
+        {/* Logo */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src={ASSETS.logoHero}
+            alt="BERP Logo"
+            className="h-40 md:h-64 w-auto"
+            loading="eager"
+          />
         </div>
 
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Somos Berp<span className="text-white font-sans opacity-80 text-[0.7em] align-top">®</span>, agencia integral de <br />
-          diseño y marketing
-        </h2>
+        {/* Heading */}
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          Somos Berp
+          <span className="text-white opacity-80 text-[0.6em] align-top">®</span>, <br />
+          agencia integral de diseño y marketing
+        </h1>
 
-        <div className="h-1 w-20 bg-berp-teal mx-auto mb-6 rounded-full"></div>
+        {/* Divider */}
+        <div className="h-1 w-20 bg-berp-teal mx-auto mb-6 rounded-full" />
 
-        <p className="text-base md:text-lg text-gray-300 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+        {/* Description */}
+        <p className="text-gray-300 text-base md:text-xl max-w-3xl mx-auto mb-6 leading-relaxed">
           Desde el branding hasta la web, desarrollamos estrategias y soluciones creativas para que tu marca venda más, se posicione mejor y proyecte una imagen profesional.
         </p>
 
-        <p className="text-berp-teal tracking-widest uppercase text-xs md:text-sm mb-10 font-bold">
+        {/* Services */}
+        <p className="text-berp-teal tracking-wider uppercase text-xs md:text-sm mb-10 font-semibold">
           Branding · Redes sociales · Marketing digital · Desarrollo web · Producción gráfica · Fotografía · Asesorías
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={WHATSAPP.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-berp-teal text-berp-dark px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-xl shadow-berp-teal/20 group animate-float-slow"
+            className="inline-flex items-center justify-center gap-2 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-semibold hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-berp-teal/20 focus:outline-none focus:ring-2 focus:ring-berp-teal"
           >
             Hablemos por WhatsApp
           </a>
+
           <a
             href="#about"
-            className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-berp-dark hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-berp-dark hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
           >
-            Ver cómo podemos ayudarte <ArrowDown size={20} />
+            Ver cómo podemos ayudarte
+            <ArrowDown size={18} />
           </a>
         </div>
       </div>
-    </div>
+
+      {/* Scroll indicator (opcional pero pro) */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 animate-bounce hidden md:block">
+        <ArrowDown size={20} />
+      </div>
+    </section>
   );
 };

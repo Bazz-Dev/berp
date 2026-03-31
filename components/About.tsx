@@ -16,16 +16,18 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 bg-berp-light px-4 py-2 rounded-full text-berp-teal font-bold text-sm uppercase tracking-widest mb-6">
-              <Zap size={16} /> ¿QUÉ HACEMOS?
+            <div className="inline-flex items-center gap-2 bg-berp-light px-4 py-2 rounded-full text-berp-teal font-bold text-sm uppercase tracking-wider mb-6">
+              <Zap size={14} /> ¿QUÉ HACEMOS?
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-berp-dark mt-2 tracking-tight">Potenciamos tu marca con dirección.</h2>
-            <p className="text-lg text-berp-teal font-medium leading-relaxed mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-berp-dark mb-8 tracking-tight leading-[1.1] uppercase">
+              <span className="text-berp-dark">¿Qué hacemos y cómo </span>
+              <span className="text-berp-teal"> te podemos ayudar?</span>
+            </h2>            <p className="text-xl font-medium text-berp-teal mb-8">
               Las marcas no crecen por casualidad. Se construyen con dirección.
             </p>
             <div className="space-y-6 text-lg text-gray-600 mb-8">
               <p>
-                En <strong>Berp®️</strong> desarrollamos estrategias, identidad y presencia digital para que tu marca se vea profesional, conecte con su audiencia y tenga una base sólida para crecer.
+                En <strong>Berp®</strong> desarrollamos estrategias, identidad y presencia digital para que tu marca se vea profesional, conecte con su audiencia y tenga una base sólida para crecer.
               </p>
               <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-berp-teal italic">
                 <p className="text-berp-dark font-medium">
@@ -37,7 +39,7 @@ export const About: React.FC = () => {
               href="https://wa.me/56948909095"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-berp-dark text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-berp-teal hover:text-berp-dark transition-all duration-300 group shadow-lg shadow-berp-teal/20"
+              className="inline-flex items-center gap-3 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-lg shadow-berp-teal/20"
             >
               Veamos qué necesita tu marca
             </a>

@@ -34,9 +34,9 @@ export const Contact: React.FC = () => {
 
           <div className="space-y-8">
             <div>
-              <span className="text-berp-teal font-bold uppercase tracking-widest text-sm">Contacto</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-berp-dark mt-2 tracking-tight">Hablemos de tu marca.</h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <span className="inline-block bg-berp-teal/20 text-berp-teal px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Contacto</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Hablemos de tu Pryecto</h2>
+              <p className="text-gray-400 text-[16px] leading-relaxed mt-4">
                 Cuéntanos en qué estás y qué necesitas. Prometemos hacerlo fácil, claro y sin promesas vacías.
               </p>
             </div>
@@ -47,8 +47,8 @@ export const Contact: React.FC = () => {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-bold">Escríbenos</p>
-                  <p className="text-lg font-bold">contacto@berp.cl</p>
+                  <p className="text-[11px] text-gray-400 uppercase font-medium">Escríbenos</p>
+                  <p className="text-[16px] font-semibold">contacto@berp.cl</p>
                 </div>
               </a>
               <a href="https://wa.me/56948909095" className="flex items-center gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
@@ -56,8 +56,8 @@ export const Contact: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-bold">Llámanos o WhatsApp</p>
-                  <p className="text-lg font-bold">+56 9 4890 9095</p>
+                  <p className="text-[11px] text-gray-400 uppercase font-medium">Llámanos o WhatsApp</p>
+                  <p className="text-[16px] font-semibold">+56 9 4890 9095</p>
                 </div>
               </a>
               <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
@@ -65,19 +65,19 @@ export const Contact: React.FC = () => {
                   <Clock size={24} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-bold">Horario de atención</p>
-                  <p className="text-lg font-bold">Lunes a Viernes: 09:00 – 18:00 hrs</p>
+                  <p className="text-[11px] text-gray-400 uppercase font-medium">Horario de atención</p>
+                  <p className="text-[16px] font-semibold">Lunes a Viernes: 09:00 – 18:00 hrs</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold text-berp-dark mb-6">Envíanos un mensaje</h3>
+            <h3 className="text-2xl font-semibold text-berp-dark mb-6">Envíanos un mensaje</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-gray-700">Nombre</label>
+                  <label className="text-sm font-semibold text-gray-700">Nombre</label>
                   <input
                     type="text"
                     name="name"
@@ -89,7 +89,7 @@ export const Contact: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-sm font-bold text-gray-700">Teléfono</label>
+                  <label className="text-sm font-semibold text-gray-700">Teléfono</label>
                   <input
                     type="tel"
                     name="phone"
@@ -103,7 +103,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-1">
-                <label className="text-sm font-bold text-gray-700">Email</label>
+                <label className="text-sm font-semibold text-gray-700">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-1">
-                <label className="text-sm font-bold text-gray-700">¿Qué necesitas?</label>
+                <label className="text-sm font-semibold text-gray-700">¿Qué necesitas?</label>
                 <textarea
                   rows={4}
                   name="message"
@@ -128,7 +128,7 @@ export const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="w-full flex justify-center items-center gap-2 bg-berp-dark text-white font-bold py-4 rounded-full hover:bg-berp-teal transition-colors duration-300">
+              <button type="submit" className="w-full flex justify-center items-center gap-2 bg-berp-dark text-white font-semibold text-[15px] tracking-wide py-3.5 md:py-4 rounded-full hover:bg-berp-teal transition-colors duration-300">
                 Enviar a WhatsApp <Send size={18} />
               </button>
             </form>

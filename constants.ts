@@ -34,13 +34,14 @@ export const NAV_LINKS = [
 ];
 
 export const SERVICES: ServiceItem[] = [
-  // Redes Sociales (4 Cards)
   {
     id: 'profile-opt',
     title: 'Optimización de Perfil',
     description: 'Mejoramos tu bio, imagen y estructura visual para transmitir profesionalismo y atraer más seguidores.',
     iconName: 'UserCheck',
-    prices: [{ qty: 'x1 Optimización', price: '$39.900', note: '+ IVA' }],
+    prices: [
+      { qty: 'x1 Optimización', price: '$39.900', note: '+ IVA' }
+    ],
     deliveryTime: '7 días hábiles',
     requirements: 'Accesos e información clave de tu cuenta.'
   },
@@ -53,13 +54,13 @@ export const SERVICES: ServiceItem[] = [
       { qty: 'x1 Post', price: '$21.900' },
       { qty: 'x3 Post', price: '$59.700' },
       { qty: 'x6 Post', price: '$113.400' },
-
     ],
     disclaimer: '+7 Posts $16.900 c/u (+ IVA)',
+    deliveryTime: 'PNG-24 (web)',
     requirements: 'Logotipo e información para la creación.'
   },
   {
-    id: 'reels-basic',
+    id: 'reels',
     title: 'Edición de Reels',
     description: 'Reels editados de máximo 15 segundos, dinámicos y alineados a tu identidad de marca.',
     iconName: 'Video',
@@ -69,10 +70,10 @@ export const SERVICES: ServiceItem[] = [
       { qty: 'x6 Ediciones', price: '$125.400' },
     ],
     disclaimer: '+7 Ediciones $18.900 c/u (+ IVA)',
-    requirements: 'Logotipo e información para la creación.'
+    requirements: 'Logotipo e información del contenido.'
   },
   {
-    id: 'stories-basic',
+    id: 'stories',
     title: 'Diseño de Stories',
     description: 'Historias personalizadas, visualmente atractivas y con tu identidad.',
     iconName: 'Smartphone',
@@ -82,21 +83,20 @@ export const SERVICES: ServiceItem[] = [
       { qty: 'x6 Stories', price: '$113.400' },
     ],
     disclaimer: '+7 Stories $16.900 c/u (+ IVA)',
-    requirements: 'Logotipo e información para la creación.'
+    requirements: 'Logotipo e información del contenido.'
   },
 
-  // Planes (2 Cards)
   {
     id: 'plan-essential',
-    title: 'ESSENTIAL',
-    subtitle: '12 Publicaciones mensuales',
+    title: 'PLAN ESSENTIAL',
     description: 'Contenido profesional para destacar tu marca y ordenar tu comunicación mes a mes.',
     iconName: 'Zap',
-    isPopular: true,
-    deliverables: [
-      '✅ 3 Posts Estáticos 3láminas (1350x1080px)',
-      '✅ 4 Carruseles 3 láminas c/u (1920x1080px)',
-      '✅ 5 Reels Editados, máx. 15 seg. c/u'
+    highlight: true,
+    image: '/assets/services/plan-essential.png',
+    prices: [
+      { qty: '✅ 3 Posts Estáticos 3láminas (1350x1080px)', price: '' },
+      { qty: '✅ 4 Carruseles 3 láminas c/u (1920x1080px)', price: '' },
+      { qty: '✅ 5 Reels Editados, ', price: '' },
     ],
     features: [
       'Análisis de la cuenta',
@@ -104,19 +104,23 @@ export const SERVICES: ServiceItem[] = [
       'Estrategia de contenido',
       'Diseños altamente creativos',
       'Revisión de métricas'
-    ]
+    ],
+
+    totalPrice: '$292.320 mensual',
+    note: '*no incluye IVA'
   },
   {
     id: 'plan-advanced',
-    title: 'ADVANCED',
-    subtitle: '12 Publicaciones mensuales',
-    description: 'Estrategia completa con diseno, redacción y analisis: contenido que conecta y convierte.',
-    iconName: 'ShieldCheck',
-    deliverables: [
-      '✅ 2 Posts Estáticos 2láminas (1350x1080px)',
-      '✅ 4 Carruseles 4 láminas c/u (1920x1080px)',
-      '✅ 6 Reels Editados, máx. 15 seg. c/u',
-      '✅ 12 Captions listos para publicar'
+    title: 'PLAN ADVANCED',
+    description: 'Estrategia completa con diseño, redacción y análisis: contenido que conecta y convierte.',
+    iconName: 'Rocket',
+    highlight: true,
+    image: '/assets/services/plan-advanced.png',
+    prices: [
+      { qty: '✅ 2 Posts Estáticos 2láminas (1350x1080px)', price: '' },
+      { qty: '✅ 4 Carruseles 4 láminas c/u (1920x1080px)', price: '' },
+      { qty: '✅ 6 Reels Editados, ', price: '' },
+      { qty: '✅ 12 Captions listos para publicar', price: '' },
     ],
     features: [
       'Análisis de la cuenta',
@@ -127,10 +131,10 @@ export const SERVICES: ServiceItem[] = [
       'Revisión de métricas',
       'Redacción de textos (copywriting)',
       'Sugerencias de hashtags'
-    ]
+    ],
+    totalPrice: '$382.620 mensual',
+    note: '*no incluye IVA'
   },
-
-  // Complementos (4 Cards)
   {
     id: 'icons',
     title: 'Diseño de Íconos',
@@ -138,40 +142,49 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Hexagon',
     prices: [
       { qty: 'x1 Ícono', price: '$7.500' },
-      { qty: 'x5 Íconos', price: '$25.000' },
-      { qty: 'x10 Íconos', price: '$45.000' },
+      { qty: 'x3 Íconos', price: '$21.000' },
+      { qty: 'x6 Íconos', price: '$39.000' },
     ],
     disclaimer: '+7 Íconos $6.000 c/u (+ IVA)',
     requirements: 'Idea clara de lo que necesitas.'
   },
   {
-    id: 'captions-service',
+    id: 'captions',
     title: 'Redacción de Caption',
     description: 'Textos listos para publicar, ajustados a tu estilo y objetivos.',
     iconName: 'FileText',
-    prices: [{ qty: 'x12 Captions', price: '$138.000' },
-    { qty: 'x20 Captions', price: '$210.000' },
-    { qty: 'x30 Captions', price: '$285.000' },
+    prices: [
+      { qty: 'x12 Captions', price: '$138.000' },
+      { qty: 'x20 Captions', price: '$210.000' },
+      { qty: 'x30 Captions', price: '$285.000' },
     ],
+    note: 'Valores + IVA',
+    deliveryTime: 'PDF o Word',
     requirements: 'imagen o idea base, objetivo del post, tono de voz y descripción breve de tu público.'
   },
   {
     id: 'qa-auto',
-    title: 'QA Automáticas',
-    description: 'Activa preguntas frecuentes en tus DM para responder al instante.',
+    title: 'Q&A Automáticas',
+    description: 'Responde al instante sin estar presente. Activa preguntas frecuentes en tus DM.',
     iconName: 'MessageCircle',
-    prices: [{ qty: '4 Q&A', price: '$32.000' }],
-    requirements: 'accesos, 4 preguntas frecuentes con sus respuestas e información clave a destacar.'
+    prices: [
+      { qty: '4 Q&A Automáticas', price: '$32.000' }
+    ],
+    deliveryTime: '7 días hábiles',
+    requirements: 'accesos, 4 preguntas frecuentes con sus respuestas e información clave a destacar.',
+    note: '+ IVA'
   },
   {
-    id: 'planner',
-    title: 'Plantilla de Stories + Planner',
+    id: 'stories-planner',
+    title: 'PLANTILLA DE STORIES + PLANNER',
     description: 'Plantillas alineadas a tu marca + planner con ideas listas para tus historias.',
     iconName: 'Calendar',
-    prices: [{ qty: 'x4 Plantillas + Planner', price: '$55.600' },
-    { qty: 'x6 Plantillas + Planner', price: '77.400' },
-    { qty: 'x8 Plantillas + Planner', price: '195.200' },
+    prices: [
+      { qty: 'x4 Plantillas + Planner', price: '$55.600' },
+      { qty: 'x6 Plantillas + Planner', price: '$77.400' },
+      { qty: 'x8 Plantillas + Planner', price: '$95.200' },
     ],
+    disclaimer: 'Publica con orden · Ideas listas para usar · Diseño con tu identidad',
     requirements: 'Logotipo e información para la creación.'
   }
 ];
@@ -265,7 +278,7 @@ export const PORTFOLIO: PortfolioItem[] = [
       author: "Nicole López",
       role: "Fundadora"
     },
-    result: 'Logramos una identidad digital coherente y una estructura de contenido que duplicó el alcance orgánico en los primeros 3 meses. 📈',
+    // result: 'Logramos una identidad digital coherente y una estructura de contenido que duplicó el alcance orgánico en los primeros 3 meses. 📈',
     services: ['PLAN ESTRATÉGICO', 'DIAGNÓSTICO', 'ASESORÍA CONTINUA', 'CONTENIDO', 'GRÁFICAS', 'MÉTRICAS'],
     beforeImage: '/assets/portfolio/insutem-before.png',
     afterImage: '/assets/portfolio/insutem-after.png',
@@ -286,7 +299,7 @@ export const PORTFOLIO: PortfolioItem[] = [
   },
   {
     id: 'antos',
-    client: 'ANTOS',
+    client: 'Antos',
     year: '2021 – 2026',
     category: 'Gustavo Gaete',
     description: 'Construimos su marca desde cero: desarrollamos identidad visual completa (logotipo y sistema gráfico), piezas impresas y digitales, recursos gráficos para su sitio web y un plan de contenido mensual alineado a la marca para impulsar su posicionamiento y crecimiento digital.',
@@ -295,7 +308,7 @@ export const PORTFOLIO: PortfolioItem[] = [
       author: "Gustavo Gaete",
       role: "Fundador y dueño"
     },
-    result: 'Consolidación de una marca profesional con presencia omnicanal y un sistema visual que facilita la creación de contenido recurrente. 🎨',
+    // result: 'Consolidación de una marca profesional con presencia omnicanal y un sistema visual que facilita la creación de contenido recurrente. 🎨',
     services: ['LOGOTIPO', 'IDENTIDAD VISUAL', 'ETIQUETAS', 'PENDONES', 'CONTENIDO VISUAL', 'RECURSOS WEB', 'PLAN DE CONTENIDO'],
     beforeImage: '/assets/portfolio/antos-before.png',
     afterImage: '/assets/portfolio/antos-after.png',
@@ -306,6 +319,8 @@ export const PORTFOLIO: PortfolioItem[] = [
 export const TEAM: TeamMember[] = [
   {
     name: 'Rommy Poza',
+    title: "DIRECCIÓN CREATIVA",
+    titleHighlight: "CON VISIÓN ESTRATÉGICA",
     role: 'Directora de Arte · Estratega Digital',
     image: '/assets/team/leader.png',
     bio: 'Berp® es una agencia liderada por Rommy Poza, Directora de Arte y especialista en marketing digital, quien supervisa y dirige cada proyecto para asegurar coherencia, calidad y enfoque en resultados. Trabajamos junto a un equipo multidisciplinario de diseñadores, desarrolladores, fotógrafos y especialistas en contenido que se integran estratégicamente según las necesidades de cada marca. Cada proyecto se aborda con análisis previo, planificación clara y ejecución profesional. Nada se deja al azar. Más que prestar servicios, acompañamos procesos y construimos marcas con dirección.',
@@ -329,7 +344,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: '1',
     title: 'Solicita tu cotización',
-    description: 'Escríbenos a contacto@berp.cl o al WhatsApp +56 9 4890 9095. Cuéntanos qué necesitas, y en 24 a 48 hrs recibirás una propuesta con valores, tiempos de entrega y proceso de trabajo.'
+    description: 'Escríbenos a contacto@berp.cl o al WhatsApp +56 9 4890 9095. Cuéntanos qué necesitas, y en 24 a 48 hrs recibirás una propuesta con valores, tiempos de entrega y proceso de trabajo.',
   },
   {
     number: '2',
@@ -339,7 +354,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: '3',
     title: '¡Manos a la obra!',
-    description: 'Iniciamos el servicio según el flujo definido para redes sociales, branding y diseño gráfico, servicios web o impresión.\n\nRealizamos envíos a todo Chile. En RM, V y VI Región despachamos con Paket Envíos, y para otras regiones utilizamos Chilexpress, Starken o Correos Chile.'
+    description: 'Iniciamos el servicio según el flujo definido para redes sociales, branding y diseño gráfico, servicios web o impresión.\n\nRealizamos envíos a todo Chile.   En RM, V y VI Región despachamos con Paket Envíos, y para otras regiones utilizamos Chilexpress, Starken o Correos Chile.'
   }
 ];
 

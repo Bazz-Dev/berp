@@ -73,6 +73,8 @@ export interface FeaturedProjectItem {
 }
 
 export interface TeamMember {
+  title: string;
+  titleHighlight?: string;
   name: string;
   role: string;
   image: string;

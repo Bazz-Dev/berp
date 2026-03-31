@@ -7,8 +7,8 @@ export const Solutions: React.FC = () => {
     <section id="solutions" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-berp-dark mt-2 tracking-tight">Soluciones integrales.</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-berp-dark tracking-tight">Soluciones integrales.</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto text-[16px] mt-4 leading-relaxed">
             Servicios que conectan estrategia, diseño y ejecución para construir marcas coherentes, funcionales y con foco en resultados.
           </p>
         </div>
@@ -25,13 +25,13 @@ export const Solutions: React.FC = () => {
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="text-2xl font-bold text-white"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent flex flex-col justify-end p-8 transition-opacity duration-300">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                    <div className="bg-berp-teal p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="-2xl font-textsemibold text-white">{service.title}</h3>
+                    <div className="bg-berp-teal p-2 rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                       <ArrowUpRight size={20} color="white" />
                     </div>
                   </div>
@@ -49,7 +49,7 @@ export const Solutions: React.FC = () => {
                     ))}
                   </ul>
 
-                  <div className="mt-4 text-berp-teal text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                  <div className="mt-4 text-berp-teal text-[11px] font-medium uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity delay-100">
                     Pincha para ver catálogo
                   </div>
                 </div>

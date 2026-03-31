@@ -10,7 +10,8 @@ export const FAQ: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">FAQ</div>
-            <h2 className="text-4xl font-bold text-berp-dark mt-2 tracking-tight">Despeja tus dudas.</h2>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-berp-dark mb-4">¿Tienes dudas?
+          </h2>
           <p className="text-gray-600 text-lg">Aquí respondemos las preguntas más comunes antes de comenzar.</p>
         </div>
 
@@ -36,17 +37,17 @@ export const FAQ: React.FC = () => {
         </div>
 
         <div className="mt-20 text-center bg-berp-light p-10 rounded-3xl border border-berp-teal/10">
-          <h3 className="text-2xl md:text-3xl font-bold text-berp-dark mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-berp-dark mb-4">
             ¿Listo(a) para trabajar con Berp®?
           </h3>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-[16px] text-gray-600 mb-8">
             👉 Escríbenos y cuéntanos qué necesitas
           </p>
           <a
             href="https://wa.me/56948909095"
             target="_blank"
             rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-xl shadow-berp-teal/20"
+            className="group inline-flex items-center gap-3 bg-berp-dark text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-berp-teal transition-all duration-300 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
           >
             Hablar por WhatsApp
           </a>

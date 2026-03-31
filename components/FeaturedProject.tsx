@@ -6,9 +6,9 @@ export const FeaturedProject: React.FC = () => {
   const renderTitle = (title: string, highlight?: string) => {
     if (!highlight) return title;
     const parts = title.split(new RegExp(`(${highlight})`, 'gi'));
-    return parts.map((part, i) => 
-      part.toLowerCase() === highlight.toLowerCase() 
-        ? <span key={i} className="text-berp-teal">{part}</span> 
+    return parts.map((part, i) =>
+      part.toLowerCase() === highlight.toLowerCase()
+        ? <span key={i} className="text-berp-teal">{part}</span>
         : part
     );
   };
@@ -17,8 +17,8 @@ export const FeaturedProject: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-20">
-          <span className="text-berp-teal font-bold uppercase tracking-widest text-sm block mb-4">Caso de Éxito</span>
-            <h2 className="text-4xl font-bold text-berp-dark mb-4 tracking-tight">Casos de Éxito</h2>
+          <span className="inline-block bg-berp-teal text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Portafolio</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-berp-dark mb-6 tracking-tight">Casos de Éxito</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Marcas que confiaron en Berp® y hoy comunican con más claridad, estrategia y resultados.
           </p>
@@ -62,12 +62,12 @@ export const FeaturedProject: React.FC = () => {
               {/* Text Block - Order toggles based on index */}
               <div className={`flex flex-col justify-center text-center lg:text-left ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="inline-block mb-6">
-                  <span className="bg-berp-light text-berp-dark px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-200">
+                  <span className="inline-block bg-berp-teal text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                     Caso de Éxito
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-berp-dark mb-8 tracking-tighter leading-none uppercase">
+                <h2 className="text-3xl md:text-5xl font-bold text-berp-dark mb-8 tracking-tight leading-[1.1] uppercase">
                   {project.titleHighlight ? (
                     <>
                       {renderTitle(project.title, project.titleHighlight)}
@@ -80,7 +80,7 @@ export const FeaturedProject: React.FC = () => {
                   )}
                 </h2>
 
-                <div className="space-y-6 text-gray-500 text-lg leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
+                <div className="space-y-6 text-gray-500 text-[16px] leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
                   <p>{project.description}</p>
                 </div>
 
@@ -90,7 +90,7 @@ export const FeaturedProject: React.FC = () => {
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="group inline-flex items-center gap-3 bg-berp-dark text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-berp-teal transition-all duration-300 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                      className="group inline-flex items-center gap-3 bg-berp-dark text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-berp-teal transition-all duration-300 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
                     >
                       Visitar Instagram <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </a>
@@ -99,7 +99,7 @@ export const FeaturedProject: React.FC = () => {
 
                 {/* Info Section */}
                 <div className="border-t border-gray-100 pt-10">
-                  <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Detalles del Proyecto</h3>
+                  <h3 className="text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-6">Detalles del Proyecto</h3>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12 mb-2 text-left">
                     <div className="flex items-start gap-3">
@@ -139,9 +139,9 @@ export const FeaturedProject: React.FC = () => {
             href={WHATSAPP.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-berp-dark text-white px-10 py-5 rounded-full font-bold uppercase tracking-wider hover:bg-berp-teal transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-lg shadow-berp-teal/20"
           >
-            ¿Quieres resultados así? Conversemos <MessageCircle size={20} />
+            ¿Quieres resultados así? Conversemos <MessageCircle size={18} />
           </a>
         </div>
       </div>

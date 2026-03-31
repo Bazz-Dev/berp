@@ -14,16 +14,22 @@ export const BerpFriends: React.FC = () => {
                         <div className="inline-flex items-center gap-2 bg-berp-teal/20 text-berp-teal px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider mb-6">
                             Comunidad gratuita
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 tracking-tight">Berp Friends</h2>
-                        <p className="text-base md:text-lg text-gray-300 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                            <strong>También compartimos lo que sabemos.</strong> BerpFriends es nuestra comunidad gratuita para marcas y emprendedores que quieren aprender, ordenar sus ideas y tomar mejores decisiones. Aquí compartimos contenido práctico, experiencias reales y herramientas aplicables para que puedas:
+                        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mt-2 mb-4">
+                            Berp Friends
+                        </h2>
+                        <p className="text-xl text-gray-300 mt-2 mb-4">
+                            <strong>También compartimos lo que sabemos.</strong>
+                        </p>
+                        <p className="text-xl text-gray-300 mt-2 mb-12">
+                            BerpFriends es nuestra comunidad gratuita para marcas y emprendedores que quieren aprender, ordenar sus ideas y tomar mejores decisiones. Aquí compartimos contenido práctico, experiencias reales y herramientas aplicables para que puedas:
                         </p>
 
-                        <div className="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                        <div className="grid md:grid-cols-3 gap-6 mb-12 text-left ">
                             <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
-                                <span className="text-berp-teal font-bold uppercase tracking-widest text-sm">Nuestro Equipo</span>
+                                <Zap className="text-berp-teal mb-4" size={24} />
                                 <p className="text-sm font-medium">Aprender a crear contenido que conecte y ayude a vender.</p>
                             </div>
+
                             <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
                                 <Layers className="text-berp-teal mb-4" size={24} />
                                 <p className="text-sm font-medium">Tomar decisiones con más claridad para hacer crecer tu marca.</p>
@@ -39,9 +45,9 @@ export const BerpFriends: React.FC = () => {
                                 href={WHATSAPP.url}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-2 bg-white text-berp-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-berp-teal hover:text-berp-dark transition-all duration-300 group"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-berp-dark px-10 py-4 rounded-full font-bold hover:bg-berp-teal hover:text-white transition-all duration-300 shadow-xl"
                             >
-                                Únete a BerpFriends <MessageCircle size={20} />
+                                Únete a BerpFriends <MessageCircle size={18} />
                             </a>
                         </div>
                     </div>

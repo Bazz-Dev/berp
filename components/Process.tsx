@@ -10,7 +10,7 @@ export const Process: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-berp-dark mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-berp-dark mb-8 tracking-tight leading-[1.1] uppercase">
             ¿Cómo disfrutar de los <span className="text-berp-teal">servicios de Berp®?</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
@@ -24,7 +24,9 @@ export const Process: React.FC = () => {
               <div className="absolute -top-6 left-8 bg-berp-dark text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold group-hover:bg-berp-teal transition-colors">
                 {step.number}
               </div>
-              <h2 className="text-4xl font-bold text-berp-dark mt-2 tracking-tight">Nuestro Proceso</h2>
+              <h2 className="text-xl font-bold text-berp-dark mt-6 mb-4">
+                {step.title}
+              </h2>
               <p className="text-gray-600 leading-relaxed">
                 {step.description}
               </p>
@@ -33,13 +35,13 @@ export const Process: React.FC = () => {
         </div>
 
         <div className="text-center">
-          <a 
-            href="https://wa.me/56948909095" 
-            target="_blank" 
+          <a
+            href="https://wa.me/56948909095"
+            target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-xl shadow-berp-teal/20"
+            className="inline-flex items-center gap-3 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-lg shadow-berp-teal/20"
           >
-            Escríbenos aquí <MessageSquare size={20} />
+            Escríbenos aquí <MessageSquare size={18} />
           </a>
         </div>
       </div>

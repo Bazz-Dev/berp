@@ -8,8 +8,8 @@ export const Portfolio: React.FC = () => {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-berp-dark mt-2 tracking-tight">Casos que inspiran.</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-berp-dark tracking-tight">Casos que inspiran.</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-[16px] mt-4">
             Resultados tangibles. Desliza para ver el cambio.
           </p>
         </div>
@@ -30,7 +30,8 @@ export const Portfolio: React.FC = () => {
               {/* Content Side */}
               <div className="flex flex-col justify-center h-full pt-4">
                 <div className="mb-8">
-                  <h3 className="text-sm font-bold text-gray-900 uppercase mb-1">Marca: <span className="text-berp-dark text-xl block mt-1">{item.client}</span></h3>
+                  <h3 className="text-sm font-bold text-gray-900 uppercase mb-1">Marca:
+                    <span className="text-berp-dark text-xl md:text-2xl font-semibold block mt-1 tracking-tight">{item.client}</span></h3>
                   <div className="mt-4 flex items-center gap-2 text-gray-600">
                     <span className="font-bold text-sm text-gray-900 uppercase">Cliente:</span>
                     {item.contactName ? (
@@ -48,7 +49,7 @@ export const Portfolio: React.FC = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="text-berp-teal font-bold text-lg mb-4">Servicios realizados:</h4>
+                  <h4 className="text-berp-teal font-semibold text-[16px] md:text-lg mb-4">Servicios realizados:</h4>
                   <ul className="space-y-3">
                     <li className="flex gap-3 text-gray-600 leading-relaxed">
                       <span className="mt-1.5 w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></span>
@@ -67,7 +68,7 @@ export const Portfolio: React.FC = () => {
                 {item.result && (
                   <div className="mb-8 p-6 bg-berp-light rounded-2xl border border-berp-teal/10">
                     <h4 className="text-berp-teal font-bold text-sm uppercase tracking-wider mb-2">Resultado de éxito:</h4>
-                    <p className="text-berp-dark font-medium text-lg leading-relaxed">
+                    <p className="text-berp-dark font-medium text-[16px] md:text-lg leading-relaxed">
                       {item.result}
                     </p>
                   </div>
@@ -81,10 +82,10 @@ export const Portfolio: React.FC = () => {
                         <Quote className="text-berp-teal" size={24} />
                       </div>
                       <div>
-                        <p className="text-gray-600 italic mb-4 text-lg leading-relaxed">"{item.testimonial.text}"</p>
+                        <p className="text-gray-600 italic mb-4 text-[16px] md:text-lg leading-relaxed">"{item.testimonial.text}"</p>
                         <div>
-                          <p className="font-bold text-berp-dark text-lg">{item.testimonial.author}</p>
-                          <p className="text-sm text-gray-500 font-medium">{item.testimonial.role}</p>
+                          <p className="font-semibold text-berp-dark text-[16px] md:text-lg">{item.testimonial.author}</p>
+                          <p className="text-[14px] text-gray-500 font-medium">{item.testimonial.role}</p>
                         </div>
                       </div>
                     </div>
@@ -96,14 +97,14 @@ export const Portfolio: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-20 flex justify-center">
+        <div className="mt-20 text-center">
           <a
             href={WHATSAPP.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-berp-dark text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-berp-teal hover:text-berp-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-berp-teal text-berp-dark px-8 py-4 rounded-full font-bold hover:bg-berp-dark hover:text-white transition-all duration-300 shadow-lg shadow-berp-teal/20"
           >
-            ¿Quieres resultados así? Conversemos <MessageCircle size={20} />
+            ¿Quieres resultados así? Conversemos <MessageCircle size={18} />
           </a>
         </div>
       </div>
